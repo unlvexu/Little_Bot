@@ -1,16 +1,19 @@
 {
     "py/object": "pros.conductor.project.Project",
     "py/state": {
-        "project_name": "Odom_Drivetrain",
+        "project_name": "Little-Bot",
         "target": "v5",
         "templates": {
             "kernel": {
-                "location": "C:\\Users\\riens\\AppData\\Roaming\\PROS\\templates\\kernel@3.1.6",
+                "location": "C:\\Users\\rycos\\AppData\\Roaming\\PROS\\templates\\kernel@3.1.6",
                 "metadata": {
+                    "allow_online": true,
                     "cold_addr": "58720256",
                     "cold_output": "bin/cold.package.bin",
+                    "force_apply": true,
                     "hot_addr": "125829120",
                     "hot_output": "bin/hot.package.bin",
+                    "kernel_version": "3.1.6",
                     "origin": "pros-mainline",
                     "output": "bin/monolith.bin"
                 },
@@ -125,7 +128,7 @@
                 "version": "3.1.6"
             },
             "okapilib": {
-                "location": "C:\\Users\\riens\\AppData\\Roaming\\PROS\\templates\\okapilib@3.3.13",
+                "location": "C:\\Users\\rycos\\AppData\\Roaming\\PROS\\templates\\okapilib@3.3.13",
                 "metadata": {
                     "origin": "pros-mainline"
                 },
