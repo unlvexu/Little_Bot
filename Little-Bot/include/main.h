@@ -25,6 +25,7 @@
  * not convienent for most student programmers.
  */
 #define PROS_USE_SIMPLE_NAMES
+const float pi = 3.141592653;
 
 /**
  * If defined, C++ literals will be available for use. All literals are in the
