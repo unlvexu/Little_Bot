@@ -65,3 +65,11 @@ void trackVelocity(sPos position, sVel& velocity){
     velocity.a = ((position.a - velocity.firstPosA)*1000)/passed;
   }
 }
+
+void odomTask(){
+  while(true){
+    trackPos(lEnc.get_value(), rEnc.get_value(), sEnc.get_value());
+    trackVelocity();
+    pros::delay(10);
+  }
+}

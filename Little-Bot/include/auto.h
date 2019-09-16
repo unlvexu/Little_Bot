@@ -1,6 +1,5 @@
+#pragma once
 #include "main.h"
-
-
 
 const float lDist = 7; // left encoder position
 const float rDist = 7; // right encoder position
@@ -16,9 +15,10 @@ const float lspintoin = (wheeldiaL*pi/ticks); // inches per revolution reft
 const float rspintoin = (wheeldiaR*pi/ticks); // inches per revolution right
 const float sspintoin = (wheeldiaS*pi/ticks); // inches per revolution strafe
 
-pros::c::adi_encoder_t lEnc = pros::c::adi_encoder_init(1,2,false); // define left encoder  change to c++
-pros::c::adi_encoder_t rEnc = pros::c::adi_encoder_init(3,4,false); // define right encoder change to c++
-pros::c::adi_encoder_t sEnc = pros::c::adi_encoder_init(5,6,false); // define strafe encoder change to c++
+pros::ADIEncoder lEnc (1,2,false); // define left encoder  
+pros::ADIEncoder rEnc (3,4,false); // define right encoder
+pros::ADIEncoder sEnc (5,6,false); // define strafe encoder
+// should 3-wire ports be placed in initialize.cpp?
 
 typedef struct _pos
 {
@@ -42,8 +42,9 @@ typedef struct _vel
 } sVel; //typedef struct containing robot velocity
 
 // functions
-void trackPos(int left, int right,int strafe,sPos& position);
+void trackPos(int left, int right,int strafe);
 void resetPos(sPos& position);
 void setPos(sPos& position, float y, float x);
 void setPos(sPos& position, float y, float x, float a);
-void trackVelocity(sPos position, sVel& velocity);
+void trackVelocity();
+void odomTask();

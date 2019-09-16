@@ -40,6 +40,7 @@ const float pi = 3.141592653;
 /**
  * You should add more #includes here
  */
+  #include "auto.h"
 //#include "okapi/api.hpp"
 //#include "pros/api_legacy.h"
 
